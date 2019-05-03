@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+ 
+  <ion-item>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input [(ngModel)]="customer.name"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input [(ngModel)]="customer.email" rows="8"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Mobile</ion-label>
+    <ion-input [(ngModel)]="customer.mobile" rows="8"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Device Id</ion-label>
+    <ion-input [(ngModel)]="customer.device_id" rows="8"></ion-input>
+  </ion-item>
+
+</ion-content>
+ 
+<ion-footer *ngIf="!customer.id">
+  <ion-toolbar color="success">
+    <ion-button expand="full" fill="clear" color="light" (click)="addCustomer()">
+      <ion-icon name="checkmark" slot="start"></ion-icon>
+      Register
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
